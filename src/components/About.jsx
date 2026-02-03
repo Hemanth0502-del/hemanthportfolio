@@ -42,11 +42,11 @@ const About = () => {
                         <pre>
                             <code>
                                 <span className="keyword">const</span> <span className="variable">developer</span> = {'{'}
-                                <span className="property">name</span>: <span className="string">'Hemanth'</span>,
-                                <span className="property">location</span>: <span className="string">'Hassan'</span>,
-                                <span className="property">loves</span>: [<span className="string">'Coding'</span>, <span className="string">'Anime'</span>],
-                                <span className="property">status</span>: <span className="string">'Building...'</span>
-                                {'}'};
+                                {'\n'}  <span className="property">name</span>: <span className="string">'Hemanth'</span>,
+                                {'\n'}  <span className="property">location</span>: <span className="string">'Hassan'</span>,
+                                {'\n'}  <span className="property">loves</span>: [<span className="string">'Coding'</span>, <span className="string">'Anime'</span>],
+                                {'\n'}  <span className="property">status</span>: <span className="string">'Building...'</span>
+                                {'\n'}{'}'};
                             </code>
                         </pre>
                     </div>

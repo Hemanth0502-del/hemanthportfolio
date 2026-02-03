@@ -117,22 +117,116 @@
     transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .name {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .tagline {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+
+    .blob-1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .blob-2 {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+    }
+
+    .greeting {
+        font-size: 1.1rem;
+    }
+
+    .name {
+        font-size: 2.75rem;
+        letter-spacing: -0.5px;
+    }
+
+    .tagline {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-size: 1rem;
     }
 
     .hero-actions {
         flex-direction: column;
         width: 100%;
+        gap: 0.75rem;
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .blob-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .blob-2 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 90px;
+    }
+
+    .greeting {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .name {
+        font-size: 2.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+        margin-bottom: 2rem;
+    }
+
+    .social-links {
+        gap: 1.25rem;
+    }
+
+    .social-link {
+        font-size: 1.35rem;
+    }
+
+    .blob-1 {
+        width: 250px;
+        height: 250px;
+        top: -50px;
+        right: -50px;
+    }
+
+    .blob-2 {
+        width: 180px;
+        height: 180px;
     }
 }

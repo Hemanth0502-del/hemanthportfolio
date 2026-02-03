@@ -53,10 +53,15 @@
 
 pre {
     margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
 }
 
 code {
     display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .keyword {
@@ -75,9 +80,57 @@ code {
     color: #9ecbff;
 }
 
+@media (max-width: 1024px) {
+    .about-container {
+        gap: 3rem;
+    }
+
+    .about-text {
+        font-size: 1.05rem;
+    }
+}
+
 @media (max-width: 768px) {
     .about-container {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .code-block {
+        padding: 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
         gap: 2rem;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.7;
+    }
+
+    .code-block {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .code-header {
+        gap: 0.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
     }
 }
