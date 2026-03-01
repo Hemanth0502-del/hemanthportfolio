@@ -1,10 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import {
+    SiReact, SiNodedotjs, SiExpress, SiMongodb, SiTypescript, SiPostgresql,
+    SiAmazonwebservices, SiFirebase, SiGoogle, SiHtml5, SiCss3, SiJavascript,
+    SiVite, SiVercel, SiChartdotjs, SiReactrouter, SiJsonwebtokens
+} from 'react-icons/si';
+import { TbApi } from 'react-icons/tb';
 import './Projects.css';
+
+const getTechIcon = (techName) => {
+    switch (techName.toLowerCase()) {
+        case 'react': return <SiReact className="tech-icon" />;
+        case 'node.js': return <SiNodedotjs className="tech-icon" />;
+        case 'express': return <SiExpress className="tech-icon" />;
+        case 'mongodb': return <SiMongodb className="tech-icon" />;
+        case 'typescript': return <SiTypescript className="tech-icon" />;
+        case 'postgresql': return <SiPostgresql className="tech-icon" />;
+        case 'aws': return <SiAmazonwebservices className="tech-icon" />;
+        case 'firebase/firestore': return <SiFirebase className="tech-icon" />;
+        case 'google oauth': return <SiGoogle className="tech-icon" />;
+        case 'html': return <SiHtml5 className="tech-icon" />;
+        case 'html/css': return <SiHtml5 className="tech-icon" />;
+        case 'css': return <SiCss3 className="tech-icon" />;
+        case 'javascript': return <SiJavascript className="tech-icon" />;
+        case 'vite': return <SiVite className="tech-icon" />;
+        case 'vercel': return <SiVercel className="tech-icon" />;
+        case 'chart.js': return <SiChartdotjs className="tech-icon" />;
+        case 'react router': return <SiReactrouter className="tech-icon" />;
+        case 'jwt': return <SiJsonwebtokens className="tech-icon" />;
+        case 'wix sdk': return <TbApi className="tech-icon" />;
+        case 'amazon sp-api': return <TbApi className="tech-icon" />;
+        case '3d logic': return <SiJavascript className="tech-icon" />;
+        default: return null;
+    }
+};
 
 const Projects = () => {
     const projects = [
+        {
+            title: 'SKUMan',
+            description: 'A comprehensive multi-channel e-commerce inventory and order management system. Features real-time sync with Wix and Amazon, hardware provisioning via Firebase for ESP32 devices, and interactive analytics dashboards.',
+            tech: ['React', 'TypeScript', 'Vite', 'Express', 'PostgreSQL', 'Firebase/Firestore', 'AWS', 'Wix SDK', 'Amazon SP-API'],
+            github: 'https://github.com/Hemanth0502-del/SKUMan',
+            demo: 'https://sku-man.vercel.app/'
+        },
         {
             title: 'FeatherPass',
             description: 'A platform that connects buyers with travelers. Users can request products from other countries, and travelers can fulfill the request.',
@@ -47,7 +87,10 @@ const Projects = () => {
                                 <p className="project-desc">{project.description}</p>
                                 <div className="project-tech">
                                     {project.tech.map((t, i) => (
-                                        <span key={i} className="tech-tag">{t}</span>
+                                        <span key={i} className="tech-tag">
+                                            {getTechIcon(t)}
+                                            {t}
+                                        </span>
                                     ))}
                                 </div>
                                 <div className="project-links">
