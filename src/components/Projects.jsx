@@ -43,7 +43,9 @@ const Projects = () => {
             description: 'A comprehensive multi-channel e-commerce inventory and order management system. Features real-time sync with Wix and Amazon, hardware provisioning via Firebase for ESP32 devices, and interactive analytics dashboards.',
             tech: ['React', 'TypeScript', 'Vite', 'Express', 'PostgreSQL', 'Firebase/Firestore', 'AWS', 'Wix SDK', 'Amazon SP-API'],
             github: 'https://github.com/Hemanth0502-del/SKUMan',
-            demo: 'https://sku-man.vercel.app/'
+            demo: 'https://sku-man.vercel.app/',
+            isPrivate: true,
+            demoNote: 'Only authorized members can access this site'
         },
         {
             title: 'FeatherPass',
@@ -94,13 +96,19 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <div className="project-links">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
-                                        <FiGithub /> GitHub
-                                    </a>
-                                    {project.demo && (
-                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
-                                            <FiExternalLink /> Live Demo
+                                    <div className="link-group">
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline">
+                                            <FiGithub /> GitHub
                                         </a>
+                                        {project.isPrivate && <span className="link-warning">Repo is private (404 error if opened)</span>}
+                                    </div>
+                                    {project.demo && (
+                                        <div className="link-group">
+                                            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-primary">
+                                                <FiExternalLink /> Live Demo
+                                            </a>
+                                            {project.demoNote && <span className="link-note">{project.demoNote}</span>}
+                                        </div>
                                     )}
                                 </div>
                             </div>
